@@ -21,14 +21,15 @@ body {
     color: white;
     font-size: 20px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: left;
     padding: 20px;
     border: 1px solid white;
 }
 
 .box:nth-child(1) {
     grid-column: span 4;
+
 }
 
 .box:nth-child(2) {
