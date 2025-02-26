@@ -9,11 +9,10 @@ body {
 
 #grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto;
-    gap: 5px;
-    width: 80%;
-    max-width: 600px;
+    grid-template-rows: 124px 124px 124px 124px 124px; /* Fix for correct row heights */
+    grid-template-columns: 242.5px 242.5px 242.5px 242.5px; /* Fix for correct column widths */
+    gap: 10px; /* Fix for grid gap */
+    background-color: white;
 }
 
 .box {
@@ -21,49 +20,25 @@ body {
     color: white;
     font-size: 20px;
     display: flex;
-    justify-content: left;
-    align-items: left;
-    padding: 20px;
+    justify-content: center;
+    align-items: center;
     border: 1px solid white;
 }
 
+/* Correcting Grid Item Spanning */
 .box:nth-child(1) {
-    grid-column: span 4;
-
+    grid-column: span 4; /* Full-width first row */
 }
 
 .box:nth-child(2) {
-    grid-row: span 4;
+    grid-row: span 4; /* Tall column on left */
 }
 
-.box:nth-child(3) {
-    grid-column: span 1;
-}
-
-.box:nth-child(4) {
-    grid-column: span 2;
-}
-
+.box:nth-child(4),
 .box:nth-child(5) {
-    grid-column: span 2;
-}
-
-.box:nth-child(6) {
-    grid-column: span 1;
-}
-
-.box:nth-child(7) {
-    grid-column: span 1;
-}
-
-.box:nth-child(8) {
-    grid-column: span 1;
-}
-
-.box:nth-child(9) {
-    grid-column: span 1;
+    grid-column: span 2; /* Two boxes spanning 2 columns */
 }
 
 .box:nth-child(10) {
-    grid-column: span 3;
+    grid-column: span 3; /* Last box spanning 3 columns */
 }
