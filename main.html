@@ -1,23 +1,61 @@
 <!DOCTYPE html>
-
-<html>
-  <head>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-
-  <body>
-    <body id="grid">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
-      <div>4</div>
-      <div>5</div>
-      <div>6</div>
-      <div>7</div>
-      <div>8</div>
-      <div>9</div>
-      <div>10</div>
-    </body>
-    <script type="text/javascript" src="./script.js"></script>
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Boxes</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        #grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto;
+            gap: 5px;
+            width: 600px;
+            background-color: white;
+        }
+        .box {
+            background-color: green;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            border: 2px solid white;
+        }
+        .box:nth-child(1) { grid-column: span 4; }
+        .box:nth-child(2) { grid-column: span 1; grid-row: span 4; }
+        .box:nth-child(3) { grid-column: span 1; }
+        .box:nth-child(4) { grid-column: span 2; }
+        .box:nth-child(5) { grid-column: span 1; }
+        .box:nth-child(6) { grid-column: span 2; }
+        .box:nth-child(7) { grid-column: span 1; }
+        .box:nth-child(8) { grid-column: span 1; }
+        .box:nth-child(9) { grid-column: span 1; }
+        .box:nth-child(10) { grid-column: span 3; }
+    </style>
+</head>
+<body>
+    <div id="grid">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+        <div class="box">10</div>
+    </div>
+</body>
 </html>
+
