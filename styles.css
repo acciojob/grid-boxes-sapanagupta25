@@ -1,1 +1,68 @@
 /*  your css code here. If applicable */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    gap: 5px;
+    width: 80%;
+    max-width: 600px;
+}
+
+.box {
+    background-color: green;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid white;
+}
+
+.box:nth-child(1) {
+    grid-column: span 4;
+}
+
+.box:nth-child(2) {
+    grid-row: span 4;
+}
+
+.box:nth-child(3) {
+    grid-column: span 1;
+}
+
+.box:nth-child(4) {
+    grid-column: span 2;
+}
+
+.box:nth-child(5) {
+    grid-column: span 2;
+}
+
+.box:nth-child(6) {
+    grid-column: span 1;
+}
+
+.box:nth-child(7) {
+    grid-column: span 1;
+}
+
+.box:nth-child(8) {
+    grid-column: span 1;
+}
+
+.box:nth-child(9) {
+    grid-column: span 1;
+}
+
+.box:nth-child(10) {
+    grid-column: span 3;
+}
